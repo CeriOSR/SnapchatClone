@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5DBDF0ABCAC1B64603C0222 /* Pods_CeriosSnaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8ED344CF9C2A0026FBFC3 /* Pods_CeriosSnaps.framework */; };
 		E01786981E43FD22007E5DA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01786971E43FD22007E5DA1 /* AppDelegate.swift */; };
 		E017869A1E43FD22007E5DA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01786991E43FD22007E5DA1 /* ViewController.swift */; };
 		E017869D1E43FD22007E5DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E017869B1E43FD22007E5DA1 /* Main.storyboard */; };
 		E017869F1E43FD22007E5DA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E017869E1E43FD22007E5DA1 /* Assets.xcassets */; };
 		E01786A21E43FD22007E5DA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01786A01E43FD22007E5DA1 /* LaunchScreen.storyboard */; };
+		E01786AA1E440D97007E5DA1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01786A91E440D97007E5DA1 /* LoginController.swift */; };
+		E01786AC1E445334007E5DA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E01786AB1E445334007E5DA1 /* GoogleService-Info.plist */; };
+		E0C500471E47B5B700C281E4 /* RecievedImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C500461E47B5B700C281E4 /* RecievedImageController.swift */; };
+		E0C5004A1E47C83200C281E4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C500491E47C83200C281E4 /* Models.swift */; };
+		E0C5004C1E47C83E00C281E4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C5004B1E47C83E00C281E4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6E2C336DE7E6BD87B0F22E1 /* Pods-CeriosSnaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeriosSnaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-CeriosSnaps/Pods-CeriosSnaps.release.xcconfig"; sourceTree = "<group>"; };
+		C776EB66813D3DA8D1954F22 /* Pods-CeriosSnaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeriosSnaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CeriosSnaps/Pods-CeriosSnaps.debug.xcconfig"; sourceTree = "<group>"; };
 		E01786941E43FD22007E5DA1 /* CeriosSnaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeriosSnaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01786971E43FD22007E5DA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01786991E43FD22007E5DA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,12 @@
 		E017869E1E43FD22007E5DA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E01786A11E43FD22007E5DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E01786A31E43FD22007E5DA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01786A91E440D97007E5DA1 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E01786AB1E445334007E5DA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0C500461E47B5B700C281E4 /* RecievedImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecievedImageController.swift; sourceTree = "<group>"; };
+		E0C500491E47C83200C281E4 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		E0C5004B1E47C83E00C281E4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EAF8ED344CF9C2A0026FBFC3 /* Pods_CeriosSnaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeriosSnaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DBDF0ABCAC1B64603C0222 /* Pods_CeriosSnaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1D7B9DAF501F7260BAFB523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF8ED344CF9C2A0026FBFC3 /* Pods_CeriosSnaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA49F9BFDFF8FF91650CE469 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C776EB66813D3DA8D1954F22 /* Pods-CeriosSnaps.debug.xcconfig */,
+				A6E2C336DE7E6BD87B0F22E1 /* Pods-CeriosSnaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E017868B1E43FD22007E5DA1 = {
 			isa = PBXGroup;
 			children = (
 				E01786961E43FD22007E5DA1 /* CeriosSnaps */,
 				E01786951E43FD22007E5DA1 /* Products */,
+				BA49F9BFDFF8FF91650CE469 /* Pods */,
+				A1D7B9DAF501F7260BAFB523 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +88,27 @@
 		E01786961E43FD22007E5DA1 /* CeriosSnaps */ = {
 			isa = PBXGroup;
 			children = (
+				E0C500481E47C80D00C281E4 /* Model and Extensions */,
 				E01786971E43FD22007E5DA1 /* AppDelegate.swift */,
 				E01786991E43FD22007E5DA1 /* ViewController.swift */,
 				E017869B1E43FD22007E5DA1 /* Main.storyboard */,
 				E017869E1E43FD22007E5DA1 /* Assets.xcassets */,
 				E01786A01E43FD22007E5DA1 /* LaunchScreen.storyboard */,
 				E01786A31E43FD22007E5DA1 /* Info.plist */,
+				E01786AB1E445334007E5DA1 /* GoogleService-Info.plist */,
+				E01786A91E440D97007E5DA1 /* LoginController.swift */,
+				E0C500461E47B5B700C281E4 /* RecievedImageController.swift */,
 			);
 			path = CeriosSnaps;
+			sourceTree = "<group>";
+		};
+		E0C500481E47C80D00C281E4 /* Model and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0C500491E47C83200C281E4 /* Models.swift */,
+				E0C5004B1E47C83E00C281E4 /* Extensions.swift */,
+			);
+			name = "Model and Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01786A61E43FD22007E5DA1 /* Build configuration list for PBXNativeTarget "CeriosSnaps" */;
 			buildPhases = (
+				339651E73627C65FD2BB0DA5 /* [CP] Check Pods Manifest.lock */,
 				E01786901E43FD22007E5DA1 /* Sources */,
 				E01786911E43FD22007E5DA1 /* Frameworks */,
 				E01786921E43FD22007E5DA1 /* Resources */,
+				CA617A20D39A788FB3E2CCF5 /* [CP] Embed Pods Frameworks */,
+				D6E4D9225432398E6451166A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01786A21E43FD22007E5DA1 /* LaunchScreen.storyboard in Resources */,
+				E01786AC1E445334007E5DA1 /* GoogleService-Info.plist in Resources */,
 				E017869F1E43FD22007E5DA1 /* Assets.xcassets in Resources */,
 				E017869D1E43FD22007E5DA1 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +183,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		339651E73627C65FD2BB0DA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA617A20D39A788FB3E2CCF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CeriosSnaps/Pods-CeriosSnaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E4D9225432398E6451166A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CeriosSnaps/Pods-CeriosSnaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E01786901E43FD22007E5DA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E017869A1E43FD22007E5DA1 /* ViewController.swift in Sources */,
+				E0C5004C1E47C83E00C281E4 /* Extensions.swift in Sources */,
+				E01786AA1E440D97007E5DA1 /* LoginController.swift in Sources */,
+				E0C500471E47B5B700C281E4 /* RecievedImageController.swift in Sources */,
 				E01786981E43FD22007E5DA1 /* AppDelegate.swift in Sources */,
+				E0C5004A1E47C83200C281E4 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +362,7 @@
 		};
 		E01786A71E43FD22007E5DA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C776EB66813D3DA8D1954F22 /* Pods-CeriosSnaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AS82F53XC3;
@@ -272,6 +376,7 @@
 		};
 		E01786A81E43FD22007E5DA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6E2C336DE7E6BD87B0F22E1 /* Pods-CeriosSnaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AS82F53XC3;
@@ -302,6 +407,7 @@
 				E01786A81E43FD22007E5DA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
