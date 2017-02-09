@@ -39,7 +39,7 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
     
     override func viewDidAppear(_ animated: Bool) {
         
-        timer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(checkForMessages), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(checkForMessages), userInfo: nil, repeats: true)
 
     }
         
@@ -124,14 +124,11 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
         guard let uid = FIRAuth.auth()?.currentUser?.uid else {return}
         let userRef = FIRDatabase.database().reference().child("user_messages").child("\(uid)")
         userRef.observe(.childAdded, with: { (snapshot) in
-            
+            self.messageArr = []
             if snapshot.key != "" {
             
-            let alert = UIAlertController(title: "New Message", message: "You have a new message", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    self.dismiss(animated: true, completion: nil)
-                    let messageId = snapshot.key
-                    let messageRef = FIRDatabase.database().reference().child("message").child("\(messageId)")
+                let messageId = snapshot.key
+                let messageRef = FIRDatabase.database().reference().child("message").child("\(messageId)")
                     messageRef.observeSingleEvent(of: .value, with: { (snapshot) in
                         
                         let dictionary = snapshot.value as! [String: Any]
@@ -147,10 +144,6 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
                     }, withCancel: nil)
                 
                     self.assigningAndPresentingAtTheEnd()
-                
-                }))
-                self.present(alert, animated: true, completion: nil)
-
             }
             
         }, withCancel: nil)
@@ -166,8 +159,14 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
     
     func handlePresentController() {
         self.recievedImageController.message = self.messageArr[0]
-        let navController = UINavigationController(rootViewController: recievedImageController)
-        self.present(navController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: "New Message", message: "You have a new message from: \(self.messageArr[0].fromName)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            let navController = UINavigationController(rootViewController: self.recievedImageController)
+            self.present(navController, animated: true, completion: nil)
+        }))
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     func handleLogout() {
