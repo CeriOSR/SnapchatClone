@@ -27,8 +27,7 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
         collectionView?.backgroundColor = .white
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         self.collectionView?.register(UsersCell.self, forCellWithReuseIdentifier: cellId)
-        fetchUsers()
-        user = []
+        //fetchUsers()
         checkIfUserExists()
         checkForMessages()
         
@@ -38,7 +37,8 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        checkIfUserExists()
+        fetchUsers()
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(checkForMessages), userInfo: nil, repeats: true)
 
     }
