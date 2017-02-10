@@ -44,6 +44,12 @@ class RecievedImageController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(dismissController), userInfo: nil, repeats: false)
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(dismissController), userInfo: nil, repeats: false)
+
+    }
 
     func dismissController() {
         assigningSnapshotToMessageIdVarThenDelete()

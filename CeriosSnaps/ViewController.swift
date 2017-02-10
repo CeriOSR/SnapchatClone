@@ -39,7 +39,7 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
     
     override func viewDidAppear(_ animated: Bool) {
         
-        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(checkForMessages), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(checkForMessages), userInfo: nil, repeats: true)
 
     }
         
@@ -159,7 +159,8 @@ class MessageCollectionController: UICollectionViewController, UICollectionViewD
     
     func handlePresentController() {
         self.recievedImageController.message = self.messageArr[0]
-        let alertController = UIAlertController(title: "New Message", message: "You have a new message from: \(self.messageArr[0].fromName)", preferredStyle: .alert)
+        guard let name = self.messageArr[0].fromName else {return}
+        let alertController = UIAlertController(title: "New Message", message: "You have a new message from: \(name)", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
             self.dismiss(animated: true, completion: nil)
             let navController = UINavigationController(rootViewController: self.recievedImageController)
